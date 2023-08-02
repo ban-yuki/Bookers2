@@ -12,19 +12,45 @@
 
   <body>
     <header>
+      <h4>Bookers</h4>
+    </header>
+    
+    <nav>
+      <ul class="nav-list"></ul>
+          <%= link_to "Home", root_path %>
+          <%= link_to "About", about_path %>
+          <%= link_to "Sing up", about_path %>
+          <%= link_to "Log in", about_path %>
+    </nav>
+
+    <main>
+      <div class = "container mt-5">
+        <h2>welcome to Bookers !!</h2>
+        <p>you can share and exchange your opinions , inpressions , and emotions</p>
+        <p>about various books!</p>
+      </div>   
     <% if user_signed_in? %>
       <li>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
       </li>
     <% else %>
       <li>
-        <%= link_to "新規登録", new_user_registration_path %>
+        <%= link_to "Sing up", new_user_registration_path %>
       </li>
       <li>
-        <%= link_to "ログイン", new_user_session_path %>
+        <%= link_to "Log in", new_user_session_path %>
       </li>
     <% end %>
     </header>
+    
+    
+    </main>
+    
+    <footer>
+      <div class = "container mt-5">
+        <p>CopyRight Infratop.inc</p>
+      </div>
+    </footer>
     <%= yield %>
   </body>
 </html>
