@@ -1,8 +1,18 @@
+<p>Welcome! You have signed up successfully.</p>
 
+<%= form_with model: @book, url: edit_user_registration_path, method: :get do |f| %>
+  
+  <h2>User info</h2>
+
+  <%= image_tag 'no_image', size: "100x100" %>
+  
+
+<% end %>
 <!-- form_with部分 -->
+
 <%= form_with model: @book, url: books_path, method: :post do |f| %>
 
-  <h3>New book</h3>
+  <h2>New book</h2>
 
   <h5>Title</h5>
   <%= f.text_field :title %>
