@@ -5,15 +5,19 @@
     <%= form_with model: @user, url: edit_user_registration_path, method: :get do |f| %>
 
       <h2>User info</h2>
-
       <%= image_tag 'no_image', size: "100x100" %>
+        <tr>
+          <th>name</th>
+          <th><%=@user.name %></th>
+        </tr>
+        <tr>
+          <th>introduction</th>
+          <th><%=@user.introduction %></th>
+        </tr>
+
+        
   
     <% end %>
-  </div>
-  
-  <div>
-    <h3><%=@user.name %></h3>
-    <%= image_tag @user.get_profile_image(100,100) %>
   </div>
 
 <!-- form_with部分 -->
@@ -26,7 +30,7 @@
     <%= f.text_field :title %>
 	
     <h5>Body</h5>
-    <%= f.text_area :body %>
+    <%= f.text_area :Opinion %>
  
     <%= f.submit 'Create Book' %>
   <% end %>

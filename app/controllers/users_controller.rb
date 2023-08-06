@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   
   def index
     @user = User.all
+    @books = books.books.page(params[:page])
   end
 
   def edit
