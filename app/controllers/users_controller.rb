@@ -1,12 +1,14 @@
 class UsersController < ApplicationController
-  def new
-  end
 
   def show
     @user = User.find(params[:id])
   end
   
   before_action :is_matching_login_user, only: [:edit, :update]
+  
+  def index
+    @user = User.all
+  end
 
   def edit
     @user = User.find(params[:id])

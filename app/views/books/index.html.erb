@@ -2,7 +2,7 @@
 
 <main>
   <div>
-    <%= form_with model: @book, url: edit_user_registration_path, method: :get do |f| %>
+    <%= form_with model: @user, url: edit_user_registration_path, method: :get do |f| %>
 
       <h2>User info</h2>
 
@@ -10,6 +10,12 @@
   
     <% end %>
   </div>
+  
+  <div>
+    <h3><%=@user.name %></h3>
+    <%= image_tag @user.get_profile_image(100,100) %>
+  </div>
+
 <!-- form_with部分 -->
 
   <%= form_with model: @book, url: books_path, method: :post do |f| %>
