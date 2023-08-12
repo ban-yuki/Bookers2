@@ -1,4 +1,21 @@
 <div>
   <h3><%=@user.name %></h3>
-  <%= image_tag @user.get_profile_image(100,100) %>
+  
 </div>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+  </tr>
+  <record>
+    <% @user.each do |book| %>
+      <tr>
+        <th><%= book.title %></th>
+        <th><%= book.body %></th>
+        <th><%= link_to "Show", book_path(book.id) %></th>
+        <th><%= link_to "Edit", edit_book_path(book.id) %></th>
+    　</tr>
+    <% end %>
+  </record>
+</table>  
