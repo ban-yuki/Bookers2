@@ -1,30 +1,6 @@
 <p>Welcome! You have signed up successfully.</p>
 
-<main>
-
-  <%= form_with model: @book, url: books_path, method: :post do |f| %>
-
-    <h2>New book</h2>
-
-    <h5>Title</h5>
-    <%= f.text_field :title %>
-	
-    <h5>Body</h5>
-    <%= f.text_area :Opinion %>
- 
-    <%= f.submit 'Create Book' %>
-  <% end %>
-
-  <% if @book.errors.any? %>
-    <%= @book.errors.count %>errors prohibited this book from being saved:
-    <ul>
-      <% @book.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
-  <% end %>
-</main>
-
+<%= render 'users/list', users: @users %>
 
 
 <h2>Books</h2>
@@ -46,27 +22,5 @@
     <% end %>
   </record>
 
-
 </table>  
 <!-- form_with部分 -->
-<%= form_with model: @book, url: books_path, method: :post do |f| %>
-
-  <h3>New book</h3>
-
-  <h5>Title</h5>
-  <%= f.text_field :title %>
-	
-  <h5>Body</h5>
-  <%= f.text_area :body %>
- 
-  <%= f.submit 'Create Book' %>
-<% end %>
-
-<% if @book.errors.any? %>
-  <%= @book.errors.count %>errors prohibited this book from being saved:
-  <ul>
-    <% @book.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-  <% end %>
-  </ul>
-<% end %>
