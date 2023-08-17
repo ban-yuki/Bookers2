@@ -1,10 +1,22 @@
-<div>
-  <h3><%= @user.name %></h3>
-  <%= image_tag @user.get_profile_image %>
-  <p><%= link_to "プロフィール編集", edit_user_path %></p>
-  <% if @user == current_user.id %>
-    <p><%= link_to "プロフィール編集", edit_user_path(@user) %></p>
-  <% end %>
-</div>
+<%= render 'users/list', user: @user,book: @newbook %>
 
-<%#= render 'post_images/list', post_images: @post_images %>
+<table class="table table-striped">
+
+<h2>Users</h2>
+
+  <thead>
+  <tr>
+    <th>image</th>
+    <th>name</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th><%= image_tag @user.get_profile_image %></th>
+    <th><%= @user.name %></th>
+    <th><%= link_to "Show", users_path %></th>
+  </tr>
+
+</table>
+
+<%#= render 'post_images/book', post_images: @post_images %>

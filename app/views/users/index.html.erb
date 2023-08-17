@@ -1,6 +1,9 @@
-<%= render 'book', users: @users %>
+<%= render 'users/list', user: @user,book: @newbook %>
 
-<div>
+<table class="table table-striped">
+  <div class="container"> 
+    <div class="row"> 
+
   <h2>Books</h2>
   <thead>
     <tr>
@@ -10,5 +13,5 @@
   </thead>
 </div>
 
-
+</table>
 

@@ -3,8 +3,11 @@
 <h2>Book detail</h2>
 
   <span>
-    <%= link_to @book.title, books_path(@book.id) %>
-
+    <tr>
+      <th><%= image_tag @user.get_profile_image, size: "100x100" %></th>
+      <th><%= link_to @user.name, users_path %></th>
+      <th><%= link_to @book.title, books_path(@book.id) %></th>
+    </tr>
   </span>
 
   <p><%=@book.body %></p>

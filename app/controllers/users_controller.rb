@@ -2,12 +2,16 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @newbook = Book.new
+    @user = current_user
+    
   end
   
   before_action :is_matching_login_user, only: [:edit, :update]
   
   def index
     @user = current_user
+    @newbook = Book.new
     @books = current_user.books
     @book = Book.new
     
@@ -35,4 +39,5 @@ class UsersController < ApplicationController
       redirect_to post_images_path
     end
   end
+  
 end
