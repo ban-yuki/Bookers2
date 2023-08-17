@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   resources :users, only: [:edit, :index, :show, :update]
   
   get "/homes/about" => "homes#about", as: "about"
-  get 'books/:id' => 'books#show', as: 'book'
+  
 
 end
