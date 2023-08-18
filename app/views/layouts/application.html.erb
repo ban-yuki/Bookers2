@@ -38,9 +38,16 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <%= yield %>
-    </main>
+  <main>
+    <% flash.each do |message_type, message| %>
+      <div class="flash-message <%= message_type %>"><%= message %></div>
+    <% end %>
+    <div class="container px-sm-0">
+      <div class="row">
+        <%= yield %>
+      </div>
+    </div>
+  </main>
 
   </body>
 

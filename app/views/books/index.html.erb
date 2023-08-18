@@ -1,22 +1,18 @@
-<p>Welcome! You have signed up successfully.</p>
-
 <%= render 'users/list', user: @user,book: @newbook %>
 
-  <div class="col-md-8 .offset-md-1">
-      <h2>Books</h2>
-      <table class="table table-striped">
-        <tr>
-          <th>Title</th>
-          <th>Opinion</th>
-        </tr>
-        <tbody>
-          <tr>
-            <th><%= link_to @book.title, books_path(@book.id) %></th>
-            <th><%= @book.body %></th>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+<div class="col-md-8 .offset-md-1">
+  <h2>Books</h2>
+  <table class="table table-striped">
+    <tr>
+      <th>Title</th>
+      <th>Opinion</th>
+    </tr>
+    <tbody>
+      <tr>
+        <th><%= link_to @book.title, books_path(@book.id) %></th>
+        <th><%= @book.body %></th>
+      </tr>
+    </tbody>
+  </table>
 </div>
 <!-- form_with部分 -->
