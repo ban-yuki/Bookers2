@@ -1,22 +1,24 @@
-<%= render 'users/list', user: @user,book: @newbook %>
-
-<table class="table table-striped">
-
-<h2>Users</h2>
-
-  <thead>
-  <tr>
-    <th>image</th>
-    <th>name</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <th><%= image_tag @user.get_profile_image %></th>
-    <th><%= @user.name %></th>
-    <th><%= link_to "Show", users_path %></th>
-  </tr>
-
-</table>
+<div class="container px-sm-0">
+  <div class="row">
+  <%= render 'users/list', user: @user,book: @newbook %>
+    <div class="col-md-8 .offset-md-1">
+      <h2>Users</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>image</th>
+              <th>name</th>
+            </tr>
+          </thead>
+        <tbody>
+          <tr>
+            <th><%= image_tag @user.get_profile_image %></th>
+            <th><%= @user.name %></th>
+            <th><%= link_to "Show", users_path %></th>
+          </tr>
+        </table>
+    </div>
+  </div>
+</div>
 
 <%#= render 'post_images/book', post_images: @post_images %>

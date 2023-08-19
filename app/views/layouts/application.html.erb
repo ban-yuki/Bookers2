@@ -40,13 +40,10 @@
     </header>
   <main>
     <% flash.each do |message_type, message| %>
-      <div class="flash-message <%= message_type %>"><%= message %></div>
+      <div class="flash-message <%= message_type %>"><%= "Welcome! You have signed up successfully." %></div>
     <% end %>
-    <div class="container px-sm-0">
-      <div class="row">
-        <%= yield %>
-      </div>
-    </div>
+      <%= yield %>
+      
   </main>
 
   </body>
