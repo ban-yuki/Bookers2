@@ -11,6 +11,15 @@
               <th>Opinion</th>
             </tr>
           </thead>
+          <tbody>
+          <% @users.each do |user| %>
+            <tr>
+              <td><%= image_tag user.image.get_profile_image(100,100) %></td>
+              <td><%= user.name %></td>
+              <td><%= link_to "Show", users_path %></td>
+            </tr>
+          <% end %>
+          </tbody>
         </table>
       </div>
   </div>
