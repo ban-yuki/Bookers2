@@ -19,7 +19,7 @@ class BooksController < ApplicationController
 
   def index
     @newbook = Book.new
-    @book = Book.new
+    @book = Book.new(params[:id])
     @books = Book.all
     @user = current_user
   end
