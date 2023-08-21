@@ -1,7 +1,10 @@
 <!DOCTYPE html>
+<meta charset="UTF-8" />
+<script src="https://kit.fontawesome.com/f9c8ebb418.js" crossorigin="anonymous"></script>
+
 <html>
   <head>
-    <div class="container">
+        <div class="container">
       <title>Bookers2</title>
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <%= csrf_meta_tags %>
@@ -23,6 +26,7 @@
       <nav>
         <ul class="nav-list">
           <tr>
+            <i class="fa-solid fa-house"></i>
             <th><%= link_to "Home", root_path %></th>
 
             <% if user_signed_in? %>
@@ -30,8 +34,11 @@
               <th><%= link_to "Books", books_path %></th>
               <th><%= link_to "Log out", destroy_user_session_path, method: :delete %></th>
             <% else %>
+              <i class="fa-solid fa-link"></i>
               <th><%= link_to "About", about_path %></th>
+              <i class="fa-solid fa-user-plus"></i>
               <th><%= link_to "Sing up", new_user_registration_path %></th>
+              <i class="fa-solid fa-right-to-bracket"></i>
               <th><%= link_to "Log in", new_user_session_path %></th>
             <% end %>
           </tr>
