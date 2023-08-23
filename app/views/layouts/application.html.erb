@@ -46,9 +46,7 @@
       </nav>
     </header>
   <main>
-    <% flash.each do |message_type, message| %>
-      <div class="flash-message <%= message_type %>"><%= "Welcome! You have signed up successfully." %></div>
-    <% end %>
+    
       <%= yield %>
       
   </main>
