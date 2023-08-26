@@ -456,7 +456,7 @@ Failures:
       [31m  expected to find text "z2g2gsq6fnt5x77a0fip" in "Bookers2\nBookers\nHome About Sing up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?\nCopyRight Infratop.inc"[0m
       [36m# ./spec/system/02_after_login_spec.rb:59:in `block (4 levels) in <main>'[0m
 
-  20) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 自分の名前と紹介文が表示される
+  20) [STEP2] ユーザログ��ン後のテスト 投稿一覧画面のテスト サイドバーの確認 自分の名前と紹介文が表示される
       [31mFailure/Error: expect(page).to have_content user.name[0m
       [31m  expected to find text "lqxb6ptjz5" in "Bookers2\nBookers\nHome About Sing up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?\nCopyRight Infratop.inc"[0m
       [36m# ./spec/system/02_after_login_spec.rb:66:in `block (4 levels) in <main>'[0m
@@ -675,7 +675,7 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/capybara-3.39.2/lib/capybara/dsl.rb:52:in `click_link'[0m
       [36m# ./spec/system/02_after_login_spec.rb:183:in `block (4 levels) in <main>'[0m
 
-  47) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 削除リンクのテスト application.html.erbにjavascript_pack_tagを含んでいる
+  47) [STEP2] ユーザログイン後のテ��ト 自分の投稿詳細画面のテスト 削除リンクのテスト application.html.erbにjavascript_pack_tagを含んでいる
       [31mFailure/Error: click_link 'Destroy'[0m
       [31m[0m
       [31mCapybara::ElementNotFound:[0m
@@ -1551,7 +1551,7 @@ Failed examples:
 [31mrspec ./spec/system/02_after_login_spec.rb:377[0m [36m# [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 表示の確認 名前編集フォームに自分の名前が表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:380[0m [36m# [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 表示の確認 画像編集フォームが表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:383[0m [36m# [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 表示の確認 自己紹介編集フォームに自分の自己紹介文が表示される[0m
-[31mrspec ./spec/system/02_after_login_spec.rb:386[0m [36m# [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 表示の確認 Update Userボタンが表示される[0m
+[31mrspec ./spec/system/02_after_login_spec.rb:386[0m [36m# [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 表示���確認 Update Userボタンが表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:402[0m [36m# [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 更新成功のテスト nameが正しく更新される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:405[0m [36m# [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 更新成功のテスト introductionが正しく更新される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:408[0m [36m# [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 更新成功のテスト リダイレクト先が、自分のユーザ詳細画面になっている[0m
