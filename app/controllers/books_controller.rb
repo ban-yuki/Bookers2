@@ -3,6 +3,7 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     @book.user_id = current_user.id
     if @book.save
+      flash[:notice] = "Welcome! You have signed up successfully."
       redirect_to book_path(@book.id)
     else
       @newbook = Book.new
@@ -31,6 +32,7 @@ class BooksController < ApplicationController
     @newbook = Book.new
     @books = Book.all
     @user = current_user
+    flash[:notice] = "You have created book successfully."
   end
 
   def edit
