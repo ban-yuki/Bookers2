@@ -14,8 +14,10 @@
             <th><%= link_to @book.user.name, users_path %></th>
             <th><%= link_to @book.title, books_path %></th>
             <th><%= @book.body %></th>
-            <th><%= link_to "Edit", edit_book_path(@book.id), class: "btn btn-sm btn-success" %></th>
-            <th><%= link_to "Destroy", book_path(@book.id), class: "btn btn-sm btn-danger", method: :delete, "data-confirm" => "Are you sure?"%></th>
+            <% if @book.user == current_user %>
+              <th><%= link_to "Edit", edit_book_path(@book.id), class: "btn btn-sm btn-success" %></th>
+              <th><%= link_to "Destroy", book_path(@book.id), class: "btn btn-sm btn-danger", method: :delete, "data-confirm" => "Are you sure?"%></th>
+            <% end %>
           </tr>
         </table>
       </div>
