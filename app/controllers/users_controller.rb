@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :is_matching_login_user, only: [:edit, :update]
 
   def show
     @users = User.find(params[:id])
@@ -6,8 +7,6 @@ class UsersController < ApplicationController
     @user = current_user
     
   end
-  
-  before_action :is_matching_login_user, only: [:edit, :update]
   
   def index
     @user = current_user

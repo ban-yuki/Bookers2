@@ -1,24 +1,32 @@
-<%= form_with model: @book, url: book_path(@book.id), method: :patch do |f| %>
+<div class="container px-sm-0">
+  <div class="row">
+    <div class="col-md-8 ml-md-auto">
+    <%= form_with model: @book, url: book_path(@book.id), method: :patch do |f| %>
 
+    <h3>Editing Book</h3>
+    <h5>Title</h5>
+    <%= f.text_field :title %>
+	  
+	  <div class="from-group">
+      <h5>Opinion</h5>
+      <%= f.text_area :body %>
+    </div>
+    <div class="from-group">
+    <%= f.submit 'Update Book', class: "btn btn-sm btn-success" %>
+    </div>
 
-  <h3>Editing Book</h3>
-  <h5>Title</h5>
-  <%= f.text_field :title %>
-	
-  <h5>Body</h5>
-  <%= f.text_area :body %>
- 
-  <%= f.submit 'Update Book' %>
-
-  <span>
-    <%= link_to "Show", book_path(@book.id) %>
-  </span>
+    <span>
+      <%= link_to "Show", book_path(@book.id) %>
+    </span>
   
-  <span>
-    <%= link_to "Back", books_path %>
-  </span>
+    <span>
+      <%= link_to "Back", books_path %>
+    </span>
 
-<% end %>
+    <% end %>
+    </div>
+  </div>
+</div>
 
 <% if @book.errors.any? %>
   <%= @book.errors.count %>errors prohibited this book from being saved:

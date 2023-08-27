@@ -13,6 +13,7 @@
             <tr>
               <th>image</th>
               <th>name</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -20,7 +21,7 @@
             <tr>
               <td><%= image_tag user.get_profile_image(100, 100) %></td>
               <td><%= user.name %></td>
-              <td><%= link_to "Show", users_path %></td>
+              <td><%= link_to "Show", books_path %></td>
             </tr>
           <% end %>
           </tbody>
