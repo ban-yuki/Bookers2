@@ -2,17 +2,25 @@
   <%= flash[:notice] %>
 </div>
 
-<div class = "container">
-   <div class="row">
-    <div class="mx-auto col-6">
 
-        <h2>welcome to Bookers !!</h2>
-        <p>In 
-          <i class="fa-solid fa-book"></i>
-          Bookers,
-        </p>
-        <p>you can share and exchange your opinions , inpressions , and emotions</p>
-        <p>about various books!</p>
+
+<div class = "container">
+  <div class="row">
+    <h1 class="px-3 mx-auto">Welcome to</h1>
+    <i class="fa-solid fa-book"></i>
+    <h1 class="px-3 mx-auto">Bookers!</h1>
+  </div>
+</div>
+
+<div class = "container">
+  <div class="row">
+    <div class="mx-auto col-6">
+      <p>In 
+        <i class="fa-solid fa-book"></i>
+        Bookers,
+      </p>
+      <p>you can share and exchange your opinions , inpressions , and emotions</p>
+      <p>about various books!</p>
 
     <%= form_with model: @user, url: user_session_path, local: true do |f| %>
     <div class="input-group-prepend">
