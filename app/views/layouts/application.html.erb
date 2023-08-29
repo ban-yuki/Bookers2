@@ -31,29 +31,30 @@
             <ul class="nav-list">
             <tr>
               <% if user_signed_in? %>
-                <%= link_to(users_path)  do %>
+                <%= link_to user_path(current_user.id) do %>
                   <i class="fas fa-home"></i>Home
                 <% end %>
-                <%= link_to(users_path)  do %>
+                <%= link_to users_path do %>
                   <i class="fa-solid fa-users"></i>Users
                 <% end %>
-                <%= link_to(books_path)  do %>
+                <%= link_to books_path do %>
                   <i class="fa-solid fa-book-open"></i>Books
                 <% end %>
-                <i class="fa-solid fa-right-from-bracket"></i>
-                <th><%= link_to "Log out", destroy_user_session_path, method: :delete %></th>
+                <%= link_to destroy_user_session_path, method: :delete do%>
+                  <i class="fa-solid fa-sign-out-alt"></i>Log out
+                <% end %>
               <% else %>
-                <%= link_to(root_path)  do %>
+                <%= link_to root_path  do %>
                   <i class="fas fa-home"></i>Home
                 <% end %>
-                <%= link_to(about_path)  do %>
+                <%= link_to about_path do %>
                   <i class="fa-solid fa-link"></i>About
                 <% end %>
-                <%= link_to(new_user_registration_path)  do %>
+                <%= link_to new_user_registration_path do %>
                   <i class="fa-solid fa-user-plus"></i>Sign up
                 <% end %>
-                <%= link_to(new_user_session_path)  do %>
-                  <i class="fa-solid fa-right-to-bracket"></i>Log in
+                <%= link_to new_user_session_path do %>
+                  <i class="fa-solid fa-sign-in-alt"></i>Log in
                 <% end %>
               <% end %>
             </tr>
