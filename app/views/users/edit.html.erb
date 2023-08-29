@@ -10,7 +10,7 @@
   <div>
     <label for="inputImage">Image</label>
   </div>
-    <%= f.file_field :profile_image, placeholder: "プロフィール画像", accept: "image/*" %> 
+    <%= f.file_field :profile_image, placeholder: "プロフィール画像", accept: "image/*" %>
 
   <div>
     <label for="inputImage">Introduction</label>
@@ -18,5 +18,6 @@
   <div>
     <%= f.text_area :introduction %>
   </div>
-  <%= f.submit "Update User" %>
+  <%= f.submit "Update User", class: "btn btn-secondary" %>
+
 <% end %>
