@@ -14,7 +14,7 @@
       </tr>
   </table>
   <%= button_to edit_user_path(user.id), :class => 'btn btn-outline-secondary btn-block', :method => :get do %>
-    <i class="fa-solid fa-user-gear"></i> 
+    <i class="fa-solid fa-user-cog"></i> 
   <% end %>
   
   <%= form_with model: book, url: books_path, method: :post do |f| %>
