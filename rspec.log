@@ -356,12 +356,12 @@ Failures:
 
   6) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト 表示の確認 投稿一覧に自分の投稿のtitleが表示され、リンクが正しい
      [31mFailure/Error: expect(page).to have_link book.title, href: book_path(book)[0m
-     [31m  expected to find link "6vk1i" with href "/books/1" but there were no matches[0m
+     [31m  expected to find link "cwd8h" with href "/books/1" but there were no matches[0m
      [36m# ./spec/system/02_after_login_spec.rb:327:in `block (4 levels) in <main>'[0m
 
   7) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト 表示の確認 投稿一覧に自分の投稿のbodyが表示される
      [31mFailure/Error: expect(page).to have_content book.body[0m
-     [31m  expected to find text "x0mxx54qxm02iluu1mv6" in "Bookers2\nBookers\nHome Users Books Log out\nUser info\nname 2jf43ff8jw introduction qej94ykmajtgaamq556d\nNew book\nTitle\nOpinion\nBooks\nTitle Opinion\nCopyRight Infratop.inc"[0m
+     [31m  expected to find text "l1vqu0r24pj7rl2ptcpe" in "Bookers2\nBookers\nHome Users Books Log out\nUser info\nname edqucy6z2f introduction yss0ejz85ug4rorkuvbt\nNew book\nTitle\nOpinion\nBooks\nTitle Opinion\nCopyRight Infratop.inc"[0m
      [36m# ./spec/system/02_after_login_spec.rb:330:in `block (4 levels) in <main>'[0m
 
   8) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクが存在する
@@ -372,15 +372,15 @@ Failures:
   9) [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 更新成功のテスト introductionが正しく更新される
      [31mFailure/Error: expect(user.reload.introduction).not_to eq @user_old_intrpduction[0m
      [31m[0m
-     [31m  expected: value != "8c4usrfxlv7gb38nbsdh"[0m
-     [31m       got: "8c4usrfxlv7gb38nbsdh"[0m
+     [31m  expected: value != "zseayvgvub9jsocs3slj"[0m
+     [31m       got: "zseayvgvub9jsocs3slj"[0m
      [31m[0m
      [31m  (compared using ==)[0m
      [36m# ./spec/system/02_after_login_spec.rb:406:in `block (4 levels) in <main>'[0m
 
   10) [STEP3] 仕上げのテスト サクセスメッセージのテスト ユーザのプロフィール情報更新成功時
       [31mFailure/Error: is_expected.to have_content 'successfully'[0m
-      [31m  expected to find text "successfully" in "Bookers2\nBookers\nHome Users Books Log out\nUser info\nname sq1bywn2gn introduction uvrtiensiapbfs2uhhel\nNew book\nTitle\nOpinion\nBooks\nTitle Opinion\nCopyRight Infratop.inc"[0m
+      [31m  expected to find text "successfully" in "Bookers2\nBookers\nHome Users Books Log out\nUser info\nname gox9ca79ir introduction jlf2yj0hcwvutee4ju8f\nNew book\nTitle\nOpinion\nBooks\nTitle Opinion\nCopyRight Infratop.inc"[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:45:in `block (3 levels) in <main>'[0m
 
   11) [STEP3] 仕上げのテスト 処理失敗時のテスト ユーザのプロフィール情報編集失敗: nameを1文字にする ユーザ編集画面を表示しており、フォームの内容が正しい
@@ -390,17 +390,17 @@ Failures:
 
   12) [STEP3] 仕上げのテスト 処理失敗時のテスト ユーザのプロフィール情報編集失敗: nameを1文字にする バリデーションエラーが表示される
       [31mFailure/Error: expect(page).to have_content "is too short (minimum is 2 characters)"[0m
-      [31m  expected to find text "is too short (minimum is 2 characters)" in "Bookers2\nBookers\nHome Users Books Log out\nUser info\nname vag19swtzy introduction 5zukocynvlkf9d1rs1yg\nNew book\nTitle\nOpinion\nBooks\nTitle Opinion\nCopyRight Infratop.inc"[0m
+      [31m  expected to find text "is too short (minimum is 2 characters)" in "Bookers2\nBookers\nHome Users Books Log out\nUser info\nname g9shl4a6uj introduction woxosch2xbmnvr2k0svt\nNew book\nTitle\nOpinion\nBooks\nTitle Opinion\nCopyRight Infratop.inc"[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:116:in `block (4 levels) in <main>'[0m
 
   13) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの新規投稿失敗: 投稿一覧画面から行い、titleを空にする バリデーションエラーが表示される
       [31mFailure/Error: expect(page).to have_content "can't be blank"[0m
-      [31m  expected to find text "can't be blank" in "Bookers2\nBookers\nHome Users Books Log out\nUser info\nname ydrpltza42 introduction te7r2p056azr2s3fkkhy\nNew book\nTitle\nOpinion\nBooks\nTitle Opinion 3idko eq0dtoy4od2kqivnm8hu axaac itgt1mkkcarrzljc7o4q\nCopyRight Infratop.inc"[0m
+      [31m  expected to find text "can't be blank" in "Bookers2\nBookers\nHome Users Books Log out\nUser info\nname ka6xlkosdj introduction 5ccbauiep4y6fpovqk4a\nNew book\nTitle\nOpinion\nBooks\nTitle Opinion kqeew s0fec9cv8r62bcr6s7k1 dr6fl 5jdc0mxmptnmvpl0nvhm\nCopyRight Infratop.inc"[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:146:in `block (4 levels) in <main>'[0m
 
   14) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 他人の名前と紹介文が表示される
       [31mFailure/Error: expect(page).to have_content other_user.introduction[0m
-      [31m  expected to find text "76k9nyz3tk8fgibr6xk8" in "Bookers2\nBookers\nHome Users Books Log out\nYou have created book successfully.\nUser info\nname 5ryachtam5 introduction 63miwheo0sjkyufi35ur\nNew book\nTitle\nOpinion\nBook detail\nouvn2ispbl 69boa llqzojkm9q6qwqppbc9b\nCopyRight Infratop.inc"[0m
+      [31m  expected to find text "3eph7kzo41a2l9haqg8t" in "Bookers2\nBookers\nHome Users Books Log out\nYou have created book successfully.\nUser info\nname xzn70v2eea introduction 5j2wichprddmn35o8y1k\nNew book\nTitle\nOpinion\nBook detail\nzawuh1ovdc egfgp 6ahc20wsgpozfflsvwt1\nCopyRight Infratop.inc"[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:245:in `block (5 levels) in <main>'[0m
 
   15) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 他人のユーザ編集画面へのリンクが存在する
@@ -410,7 +410,7 @@ Failures:
 
   16) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 自分の名前と紹介文は表示されない
       [31mFailure/Error: expect(page).not_to have_content user.name[0m
-      [31m  expected not to find text "fcd3htg9so" in "Bookers2\nBookers\nHome Users Books Log out\nYou have created book successfully.\nUser info\nname fcd3htg9so introduction b80dbxafsi48asmqijty\nNew book\nTitle\nOpinion\nBook detail\nwj4x7eychk rvkbx f8w9bmmr4tsgm99aenvm\nCopyRight Infratop.inc"[0m
+      [31m  expected not to find text "4v3wq4bl7q" in "Bookers2\nBookers\nHome Users Books Log out\nYou have created book successfully.\nUser info\nname 4v3wq4bl7q introduction erhd1wxzdh7xtxsu8b3g\nNew book\nTitle\nOpinion\nBook detail\npuwt6dl896 9rh7x k1omn0840hpf3gu5n14g\nCopyRight Infratop.inc"[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:251:in `block (5 levels) in <main>'[0m
 
   17) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿編集画面 遷移できず、投稿一覧画面にリダイレクトされる
@@ -429,17 +429,17 @@ Failures:
 
   19) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト 表示の確認 投稿一覧に他人の投稿のtitleが表示され、リンクが正しい
       [31mFailure/Error: expect(page).to have_link other_book.title, href: book_path(other_book)[0m
-      [31m  expected to find link "ifm74" with href "/books/2" but there were no matches[0m
+      [31m  expected to find link "0h8fh" with href "/books/2" but there were no matches[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:286:in `block (5 levels) in <main>'[0m
 
   20) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト 表示の確認 投稿一覧に他人の投稿のopinionが表示される
       [31mFailure/Error: expect(page).to have_content other_book.body[0m
-      [31m  expected to find text "g7mfejxpu85mb4f2w22w" in "Bookers2\nBookers\nHome Users Books Log out\nUser info\nname z9gkcg3s31 introduction pgke89bc59zk8dtk7p6u\nNew book\nTitle\nOpinion\nBooks\nTitle Opinion\nCopyRight Infratop.inc"[0m
+      [31m  expected to find text "qcret9aslwkixq4l7ctm" in "Bookers2\nBookers\nHome Users Books Log out\nUser info\nname avhc6yvxy0 introduction brjqdvmm0m5ggpstthvp\nNew book\nTitle\nOpinion\nBooks\nTitle Opinion\nCopyRight Infratop.inc"[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:289:in `block (5 levels) in <main>'[0m
 
   21) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト サイドバーの確認 他人の名前と紹介文が表示される
       [31mFailure/Error: expect(page).to have_content other_user.name[0m
-      [31m  expected to find text "8pevhm68ff" in "Bookers2\nBookers\nHome Users Books Log out\nUser info\nname c2yfo9xkla introduction rnbddigwxi4zyxb0qpc6\nNew book\nTitle\nOpinion\nBooks\nTitle Opinion\nCopyRight Infratop.inc"[0m
+      [31m  expected to find text "m4pzhspwe4" in "Bookers2\nBookers\nHome Users Books Log out\nUser info\nname 33uzn21hnm introduction e2wstl2c793364bnnfsb\nNew book\nTitle\nOpinion\nBooks\nTitle Opinion\nCopyRight Infratop.inc"[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:299:in `block (5 levels) in <main>'[0m
 
   22) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト サイドバーの確認 他人のユーザ編集画面へのリンクが存在する
@@ -449,7 +449,7 @@ Failures:
 
   23) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト サイドバーの確認 自分の名前と紹介文は表示されない
       [31mFailure/Error: expect(page).not_to have_content user.name[0m
-      [31m  expected not to find text "7x5cfsn97m" in "Bookers2\nBookers\nHome Users Books Log out\nUser info\nname 7x5cfsn97m introduction l5zfg1hesjiw3z5suv0a\nNew book\nTitle\nOpinion\nBooks\nTitle Opinion\nCopyRight Infratop.inc"[0m
+      [31m  expected not to find text "eu0o233sxs" in "Bookers2\nBookers\nHome Users Books Log out\nUser info\nname eu0o233sxs introduction s989sx9waamwp7vehclw\nNew book\nTitle\nOpinion\nBooks\nTitle Opinion\nCopyRight Infratop.inc"[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:306:in `block (5 levels) in <main>'[0m
 
   24) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ情報編集画面 遷移できず、自分のユーザ詳細画面にリダイレクトされる
@@ -515,7 +515,7 @@ Failures:
       [31m  expected to find css ".container .row .col-md-8.offset-md-1" but there were no matches[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:351:in `block (3 levels) in <main>'[0m
 
-Finished in 23.34 seconds (files took 1.34 seconds to load)
+Finished in 42.31 seconds (files took 1.93 seconds to load)
 [31m199 examples, 28 failures[0m
 
 Failed examples:
