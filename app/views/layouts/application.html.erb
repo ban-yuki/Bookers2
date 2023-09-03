@@ -18,54 +18,47 @@
   </head>
 
   <body>
-    <header> 
+    <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <a class="navbar-brand" href="/">Bookers</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-              <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                  <tr>
-                  <% if user_signed_in? %>
-                    <%= link_to user_path(current_user.id) do %>
-                      <i class="fas fa-home"></i>Home
-                    <% end %>
-                    <%= link_to users_path do %>
-                      <i class="fa-solid fa-users"></i>Users
-                    <% end %>
-                    <%= link_to books_path do %>
-                      <i class="fa-solid fa-book-open"></i>Books
-                    <% end %>
-                    <%= link_to destroy_user_session_path, method: :delete do%>
-                      <i class="fa-solid fa-sign-out-alt"></i>Log out
-                    <% end %>
-                  <% else %>
-                    <%= link_to root_path do %>
-                      <i class="fas fa-home"></i>Home
-                    <% end %>
-                    <%= link_to about_path do %>
-                      <i class="fa-solid fa-link"></i>About
-                    <% end %>
-                    <%= link_to new_user_registration_path do %>
-                      <i class="fa-solid fa-user-plus"></i>Sign up
-                    <% end %>
-                    <%= link_to new_user_session_path do %>
-                      <i class="fa-solid fa-sign-in-alt"></i>Log in
-                    <% end %>
+        <div class="container">
+          <a class="navbar-brand" href="/">Bookers</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <tr>
+                <% if user_signed_in? %>
+                  <%= link_to user_path(current_user.id) do %>
+                    <i class="fas fa-home"></i>Home
                   <% end %>
-                  </tr>
-                  </li>
-                </ul>
-              </div>
-            
+                  <%= link_to users_path do %>
+                    <i class="fa-solid fa-users"></i>Users
+                  <% end %>
+                  <%= link_to books_path do %>
+                    <i class="fa-solid fa-book-open"></i>Books
+                  <% end %>
+                  <%= link_to destroy_user_session_path, method: :delete do%>
+                    <i class="fa-solid fa-sign-out-alt"></i>Log out
+                  <% end %>
+                <% else %>
+                  <%= link_to root_path do %>
+                    <i class="fas fa-home"></i>Home
+                  <% end %>
+                  <%= link_to about_path do %>
+                    <i class="fa-solid fa-link"></i>About
+                  <% end %>
+                  <%= link_to new_user_registration_path do %>
+                    <i class="fa-solid fa-user-plus"></i>Sign up
+                  <% end %>
+                  <%= link_to new_user_session_path do %>
+                    <i class="fa-solid fa-sign-in-alt"></i>Log in
+                  <% end %>
+                <% end %>
+              </tr>
+            </ul>
           </div>
         </div>
-      </div>
       </nav>
     </header>
     <main>
