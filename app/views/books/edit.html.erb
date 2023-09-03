@@ -1,12 +1,12 @@
-<div class="container px-sm-0">
+<div class="container">
   <div class="row">
-    <div class="col-md-8 ml-md-auto">
+    <div class="col-sm-8 ml-md-auto">
     <%= form_with model: @book, url: book_path(@book.id), method: :patch do |f| %>
 
     <h3>Editing Book</h3>
     <h5>Title</h5>
     <%= f.text_field :title %>
-	  
+
 	  <div class="from-group">
       <h5>Opinion</h5>
       <%= f.text_area :body %>
@@ -18,7 +18,7 @@
     <span>
       <%= link_to "Show", book_path(@book.id) %>
     </span>
-  
+
     <span>
       <%= link_to "Back", books_path %>
     </span>
