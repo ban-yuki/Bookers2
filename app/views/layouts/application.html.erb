@@ -62,12 +62,14 @@
       </nav>
     </header>
     <main>
-    <div>
-      <%= flash[:notice] %>
-    </div>
-
-      <%= yield %>
-
+      <div>
+        <%= flash[:notice] %>
+      </div>
+      <div class="container px-5 px-sm-0">
+        <div class="row">
+          <%= yield %>
+        </div>
+      </div>
     </main>
 
   </body>
